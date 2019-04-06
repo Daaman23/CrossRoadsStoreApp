@@ -190,5 +190,11 @@ namespace CrossRoadsStoreApp.Controllers
             }
             base.Dispose(disposing);
         }
+        
+        public ActionResult ListProductsByCategory(int id)
+        {
+            var products = db.Products.Where(p => p.CategoryId == id);
+            return View(products.ToList());
+        }
     }
 }

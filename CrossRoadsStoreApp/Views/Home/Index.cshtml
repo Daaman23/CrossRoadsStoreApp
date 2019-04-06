@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<CrossRoadsStoreApp.Models.Category>
+
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -29,3 +31,15 @@
         <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
 </div>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            <button class="btn btn-primary">@Html.ActionLink("View Products", "ListProductsByCategory", "Products", new { id = item.CategoryId }, new { @style = "color: white;" })</button>
+        </td>
+    </tr>
+}
