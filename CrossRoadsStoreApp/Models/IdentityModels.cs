@@ -29,5 +29,11 @@ namespace CrossRoadsStoreApp.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<CrossRoadsStoreApp.Models.Product> Products { get; set; }
+
+        public System.Data.Entity.DbSet<CrossRoadsStoreApp.Models.Category> Categories { get; set; }
+
+        public System.Data.Entity.DbSet<CrossRoadsStoreApp.Models.ShoppingCart> ShoppingCarts { get; set; }
     }
 }
