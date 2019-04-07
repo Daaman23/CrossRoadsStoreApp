@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Index";
+    decimal total = 0;
 }
 
 <h2>Index</h2>
@@ -44,6 +45,15 @@
             @Html.ActionLink("Remove", "Delete", new { id=item.ShoppingCartId })
         </td>
     </tr>
+    total += (item.Price * item.Quantity);
 }
-
+    <tr>
+        <th>
+            Total
+        </th>
+        <th></th>
+    </tr>
+    <tr>
+        <th>@String.Format("{0:c}", total)</th>
+    </tr>
 </table>

@@ -30,7 +30,8 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Admin <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li>@Html.ActionLink("Manage Products", "Index", "Products")</li>
-                                <li>@Html.ActionLink("Category Manager", "Categories", "Index")</li>
+                                <li>@Html.ActionLink("Category Manager", "Index", "Categories")</li>
+                                <li>@Html.ActionLink("Cart", "Index", "ShoppingCarts")</li>
                             </ul>
                         </li>
                     }
@@ -43,6 +44,10 @@
                                 <li>@Html.ActionLink("Cart", "Index", "ShoppingCarts")</li>
                             </ul>
                         </li>
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink("Cart", "Index", "ShoppingCarts")</li>
                     }
                 </ul>
                 @Html.Partial("_LoginPartial")
