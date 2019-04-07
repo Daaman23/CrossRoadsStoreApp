@@ -63,6 +63,11 @@ namespace CrossRoadsStoreApp
             //    ClientId = "",
             //    ClientSecret = ""
             //});
+
+        //login as Google account
+            app.UseGoogleAuthentication(
+         clientId: "84909453280-r9n8ub40vue903nnjddojh5pdb3fgp0d.apps.googleusercontent.com",
+         clientSecret: "jDvRCsnOZ0-WUozz0yfBWgYv");
         }
     }
 }
