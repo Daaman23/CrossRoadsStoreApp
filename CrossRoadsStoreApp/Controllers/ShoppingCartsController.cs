@@ -30,7 +30,7 @@ namespace CrossRoadsStoreApp.Controllers
         // GET: ShoppingCarts/Details/5
         public ActionResult Details(int? id)
         {
-            if (id == null)
+            if (id == null || db.ShoppingCarts.Find(id).Owner != Session["CartOwnerName"].ToString())
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
@@ -125,8 +125,13 @@ namespace CrossRoadsStoreApp.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             ShoppingCart shoppingCart = db.ShoppingCarts.Find(id);
-            db.ShoppingCarts.Remove(shoppingCart);
-            db.SaveChanges();
+
+            if (db.ShoppingCarts.Find(id).Owner == Session["CartOwnerName"].ToString())
+            {
+                db.ShoppingCarts.Remove(shoppingCart);
+                db.SaveChanges();
+            }
+            
             return RedirectToAction("Index");
         }
 
