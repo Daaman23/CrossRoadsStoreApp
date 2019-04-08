@@ -79,7 +79,7 @@ namespace CrossRoadsStoreApp
         //login using twitter account
         app.UseTwitterAuthentication(
          consumerKey: "rCLa000J0mqeEzKxCaurOpBJo",
-         consumerSecret: "sJHOe5SWbyMgmFs1vyntwxaqIWlPPLY2TA72oRTQyqmovpgPGy");
+         consumerSecret: "sJHOe5SWbyMgmFs1vyntwxaqIW lPPLY2TA72oRTQyqmovpgPGy");
         }
 
 
