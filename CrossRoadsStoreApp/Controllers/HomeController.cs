@@ -7,7 +7,6 @@ using System.Web.Mvc;
 
 namespace CrossRoadsStoreApp.Controllers
 {
-    [RequireHttps]
     public class HomeController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -29,6 +28,5 @@ namespace CrossRoadsStoreApp.Controllers
 
             return View();
         }
-
     }
 }
