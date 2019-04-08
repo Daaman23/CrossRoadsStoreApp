@@ -3,7 +3,6 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
-using Microsoft.Owin.Security.Facebook;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using CrossRoadsStoreApp.Models;
@@ -64,24 +63,6 @@ namespace CrossRoadsStoreApp
             //    ClientId = "",
             //    ClientSecret = ""
             //});
-
-        //login using Google account
-            app.UseGoogleAuthentication(
-         clientId: "84909453280-r9n8ub40vue903nnjddojh5pdb3fgp0d.apps.googleusercontent.com",
-         clientSecret: "jDvRCsnOZ0-WUozz0yfBWgYv");
-        
-
-        //login using facebook account
-        app.UseFacebookAuthentication(
-         appId: "855025968175545",
-         appSecret: "fad49096671258c8475d511ee2f2aa64"); 
-        
-        //login using twitter account
-        app.UseTwitterAuthentication(
-         consumerKey: "rCLa000J0mqeEzKxCaurOpBJo",
-         consumerSecret: "sJHOe5SWbyMgmFs1vyntwxaqIW lPPLY2TA72oRTQyqmovpgPGy");
         }
-
-
-}
+    }
 }
